@@ -23,7 +23,7 @@ char letA[]="........"
 char Wmap[] =   "########"
                 "#......#"
                 "#......#"
-                "#...#..#"
+                "#......#"
                 "#......#"
                 "#......#"
                 "#......#"
@@ -74,12 +74,9 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
                 int x, y;
                 x = pm(-i + xOffset -2 );
                 y = pm(j + yOffset);
-                fb->bitmap->pixel[x][y] = WHITE;
-                //if (x >= 0 && x < 8 && y >= 0 && y < 8) {
-                //    fb->bitmap->pixel[x][y] = WHITE;
-                //    printf("rebecc is short");
+                if (x >= 0 && x < 8 && y >= 0 && y < 8) {
+                    fb->bitmap->pixel[x][y] = WHITE;
             }
         }
 }
 }   
-//}
