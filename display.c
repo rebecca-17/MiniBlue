@@ -74,6 +74,7 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
                 int x, y;
                 x = (-i + xOffset -2 );
                 y = (j + yOffset);
+                printf("Pixel at map[%d][%d] maps to screen[%d][%d]\n", i, j, x, y);
                 if (x >= 0 && x < 8 && y >= 0 && y < 8) {
                     fb->bitmap->pixel[x][y] = WHITE;
             }
