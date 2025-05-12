@@ -31,11 +31,11 @@ void handler(unsigned int code) {
     }else if(code == KEY_LEFT) {
         //printf("up");
         if (!(vy >= 8)) {
-        vy++
+        vy++;
         };
     }else if(code == KEY_ENTER) {
         //printf("push");
-        Ourindex++; ;
+        Ourindex++;
     }
     printf("\n");
 }
