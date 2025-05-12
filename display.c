@@ -55,12 +55,12 @@ int pm(int i) {
         return (i % 8 + 8) % 8;
 }
 
-bitmap->pixel[2][2] = BlUE;
+
 
 void display_map(char map, int xOffset, int yOffset, char* color, int degrees, int vx, int vy){
-
+    
     char *object=NULL;
-
+    
     if(map=='m') {
         object=Wmap;
     }else {
@@ -69,7 +69,7 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
     }
 
     clear_display(); 
-
+    fb->bitmap->pixel[2][2] = BlUE;
     for(int i=0; i<8; i++) {
         for(int j=0; j<8; j++) {
             if(object[i+j*8]=='#') {
