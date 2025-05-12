@@ -83,6 +83,6 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
                 //    fb->bitmap->pixel[x][y] = WHITE;
             }
         }
-}
+    }
 }   
 //}
