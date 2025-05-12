@@ -11,42 +11,25 @@
 #define BLUE  0x001F  
 
 pi_framebuffer_t *fb= NULL;
-
 char letA[]="........"
             "..###..."
             ".#...#.."
             ".#...#.."
-            ".#####.."
+            "........"
             ".#...#.."
             ".#...#.."
             ".#...#..";
 
-char letY[] ="........"
-             ".#...#.."
-             ".#...#.."
-             ".#...#.."
-             "..#.#..."
-             "...#...."
-             "...#...."
-             "...#....";
+char Wmap[] =   "########"
+                "#......#"
+                "#......#"
+                "#......#"
+                "#......#"
+                "#......#"
+                "#......#"
+                "########";
 
-char letR[]="........"
-            ".####..."
-            ".#...#.."
-            ".#...#.."
-            ".####..."
-            ".#.#...."
-            ".#..#..."
-            ".#...#..";
 
-char letF[] = "........"
-              ".####..."
-              ".#......"
-              ".#......"
-              ".####..."
-              ".#......"
-              ".#......"
-              ".#......";
 
 void clear_display(void){
     if(fb) {
@@ -72,64 +55,26 @@ int pm(int i) {
         return (i % 8 + 8) % 8;
 }
 
-void display_letter(char letter, int xOffset, int yOffset, char* color, int degrees, int vx, int vy){
+void display_map(char map, int xOffset, int yOffset, char* color, int degrees, int vx, int vy){
 
-    char *ltr=NULL;
+    char *object=NULL;
 
-    if(letter=='A') {
-        ltr=letA;
-    } else if(letter=='Y') {
-        ltr=letY;
-    } else if(letter=='R') {
-        ltr=letR;
-    }else if(letter=='F') {
-        ltr=letF;
-    } else {
+    if(map=='map') {
+        object=Wmap;
+    }else {
         printf("Critical error\n");
-        ltr=letA;
+        object=letA;
     }
-
-    //sense_fb_bitmap_t *bm=fb->bitmap;
 
     clear_display(); 
 
     for(int i=0; i<8; i++) {
         for(int j=0; j<8; j++) {
-            if(ltr[i+j*8]=='#') {
+            if(object[i+j*8]=='#') {
                 int x, y;
-                
-                if (degrees == 0) {
-                    x = pm(-i + xOffset -2 );
-                    y = pm(j + yOffset);
-
-                } else if (degrees == 90) {
-                    x = pm(j+xOffset);
-                    y = pm(7- (-i)+yOffset+2);
-                    
-                } else if (degrees == 180) {
-                    x = pm(7 - (-i) + xOffset +2);
-                    y = pm(7 - j + yOffset);
-                } else if (degrees == 270) {
-                    x = pm(7 - j + xOffset);
-                    y = pm(-i + yOffset -2);
-                }
-                if((vx>10||vx<-10||vy>10||vy<-10)||(strcmp(color, "RED")==0))
-                {
-                    fb->bitmap->pixel[x][y] = RED;
-
-                }
-                else if (strcmp(color, "BLUE")==0){
-                    fb->bitmap->pixel[x][y] = BLUE;
-
-                }
-                else if (strcmp(color, "GREEN")==0){
-                    fb->bitmap->pixel[x][y] = GREEN;
-
-                }
-                else{
-                    fb->bitmap->pixel[x][y] = WHITE;
-                }           
+                x = pm(-i + xOffset -2 );
+                y = pm(j + yOffset);
+                fb->bitmap->pixel[x][y] = WHITE;
             }
         }
-    } 
 }

@@ -9,9 +9,6 @@
 int vx = 0, vy = 0;
 char* color = "WHITE";
 int degrees = 0;
-char *speed = NULL;
-bool passSpeed=false;
-
 int Ourindex = 0;
 
 void handler(unsigned int code) {
@@ -54,18 +51,8 @@ void dot_roll() {
             clear_display();
             break;
         }
-
-        if(passSpeed){
-            display_letter(letters[Ourindex], ix, iy, color, degrees, vx, vy);
-
-        }
-        else{
-            display_letter(letters[Ourindex], ix, iy, color, degrees, 0, 0);
-
-        }
-        
-        x += vx * dt;
-        y += vy * dt;
+        x += vx;
+        y += vy;
         usleep(50000);
     }
 
@@ -98,39 +85,7 @@ int main(int argc, char *argv[]){
             h();
             return 0;
 
-        }
-        else if (strcmp(argv[i], "-c")==0) {
-            color=argv[i+1];
-            i++;
-            if (strcmp(color, "WHITE") != 0 && 
-                strcmp(color, "RED") != 0 && 
-                strcmp(color, "BLUE") != 0 && 
-                strcmp(color, "GREEN") != 0) {
-                printf(argv[0]);
-                h(); 
-                return 1; 
-            }
-            
-        }
-        else if (strcmp(argv[i], "-r")==0) {
-            degrees = atoi(argv[i+1]);
-            i++;
-            
-            if (degrees!=0 && 
-                degrees!= 90 && 
-                degrees != 180 && 
-                degrees != 270) {
-                printf(argv[0]);
-                h(); 
-                return 1; 
-            }
-            
-        
-        }
-        else if (strcmp(argv[i], "-s")==0) {
-            passSpeed=true;
-        }
-        else{
+        } else{
             printf(argv[0]);
             h();
             return 0;
