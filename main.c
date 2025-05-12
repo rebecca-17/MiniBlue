@@ -42,12 +42,10 @@ void dot_roll() {
 
     open_input();
     while (1) {
-        int ix = (int)x;
-        int iy = (int)y;
 
         check_input(handler,10);
         clear_display();
-        display_map('m', ix, iy, color, degrees, 0, 0);
+        display_map('m', 0, 0, color, degrees, 0, 0);
         //printf("x = %.2f, y = %.2f | ix = %d, iy = %d\n", x, y, ix, iy);
         x = vx;
         y = vy;
