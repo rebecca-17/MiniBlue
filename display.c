@@ -76,12 +76,13 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
                 int x, y;
                 //x = (i + xOffset -2 );
                 //y = (j + yOffset);
-                x = (i +  -2 );
+                x = (i);
                 y = (j);
-                if (x >= 0 && x < 8 && y >= 0 && y < 8) {
-                    fb->bitmap->pixel[x][y] = WHITE;
+                fb->bitmap->pixel[x][y] = WHITE
+                //if (x >= 0 && x < 8 && y >= 0 && y < 8) {
+                //    fb->bitmap->pixel[x][y] = WHITE;
             }
         }
 }
 }   
-}
+//}
