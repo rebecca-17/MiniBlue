@@ -15,16 +15,16 @@ void handler(unsigned int code) {
     printf("code: %u\t",code);
     if(code == KEY_UP) {
         //printf("right");
-        vx--;
+        vx++;
     }else if(code == KEY_DOWN) {
         //printf("left");
-        vx++;
+        vx--;
     }else if(code == KEY_RIGHT) {
         //printf("down");
-        vy++;
+        vy--;
     }else if(code == KEY_LEFT) {
         //printf("up");
-        vy--;
+        vy++;
     }else if(code == KEY_ENTER) {
         //printf("push");
         Ourindex++; ;
