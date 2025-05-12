@@ -47,7 +47,7 @@ void dot_roll() {
 
         check_input(handler,10);
         clear_display();
-        display_map('m', ix, iy, color, degrees, 0, 0)
+        display_map('m', ix, iy, color, degrees, 0, 0);
         x += vx;
         y += vy;
         usleep(50000);

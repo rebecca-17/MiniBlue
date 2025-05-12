@@ -8,6 +8,6 @@ void check_input(void (*callback)(unsigned int code), int delay);
 void clear_display(void); 
 void open_display(void);
 void close_display(void);
-void display_letter(char letter, int xOffset, int yOffset, char* color, int degrees, int vx, int vy);
+void display_map(char letter, int xOffset, int yOffset, char* color, int degrees, int vx, int vy);
 
 #endif
