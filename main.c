@@ -53,7 +53,7 @@ void dot_roll() {
 
         check_input(handler,10);
         clear_display();
-        display_map('m', 0, 0, color, degrees, 0, 0);
+        display_map('m', -2, -2, color, degrees, 0, 0);
         //printf("x = %.2f, y = %.2f | ix = %d, iy = %d\n", x, y, ix, iy);
         x = vx;
         y = vy;
