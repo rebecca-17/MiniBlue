@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-int vx = -2, vy = -2;
+int vx = 0, vy = 0;
 char* color = "WHITE";
 int degrees = 0;
 int Ourindex = 0;
@@ -15,22 +15,22 @@ void handler(unsigned int code) {
     printf("code: %u\t",code);
     if(code == KEY_UP) {
         //printf("right");
-        if (!(vx >= 8)) {
+        if (!(vx > 8)) {
         vx++;
         };
     }else if(code == KEY_DOWN) {
         //printf("left");
-        if (!(vx <= 0)) {
+        if (!(vx < 0)) {
         vx--;
         };
     }else if(code == KEY_RIGHT) {
         //printf("down");
-        if (!(vy <= 0)) {
+        if (!(vy < 0)) {
         vy--;
         };
     }else if(code == KEY_LEFT) {
         //printf("up");
-        if (!(vy >= 8)) {
+        if (!(vy > 8)) {
         vy++;
         };
     }else if(code == KEY_ENTER) {
@@ -54,7 +54,6 @@ void dot_roll() {
         check_input(handler,10);
         clear_display();
         display_map('m', x, y, color, degrees, 0, 0);
-        //printf("x = %.2f, y = %.2f | ix = %d, iy = %d\n", x, y, ix, iy);
         x = vx;
         y = vy;
         usleep(50000);
