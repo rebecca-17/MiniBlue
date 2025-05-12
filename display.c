@@ -80,7 +80,7 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
                 x = (i);
                 y = (j);
                 fb->bitmap->pixel[x][y] = WHITE;
-                if (x >= 1 && x < 7 && y >= 1 && y < 7) {
+                if (Rx >= 1 && Rx < 7 && Ry >= 1 && Ry < 7) {
                     fb->bitmap->pixel[Rx][Ry] = BLUE;
             }
         }
