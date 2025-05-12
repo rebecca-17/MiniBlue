@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-int vx = 2, vy = 2;
+int vx = -2, vy = -2;
 char* color = "WHITE";
 int degrees = 0;
 int Ourindex = 0;
