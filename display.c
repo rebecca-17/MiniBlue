@@ -55,7 +55,7 @@ int pm(int i) {
         return (i % 8 + 8) % 8;
 }
 
-fb->bitmap->pixel[2][2] = BlUE;
+bitmap->pixel[2][2] = BlUE;
 
 void display_map(char map, int xOffset, int yOffset, char* color, int degrees, int vx, int vy){
 
