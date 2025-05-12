@@ -78,7 +78,7 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
                 //y = (j + yOffset);
                 x = (i);
                 y = (j);
-                fb->bitmap->pixel[x][y] = WHITE
+                fb->bitmap->pixel[x][y] = WHITE;
                 if (x >= 0 && x < 8 && y >= 0 && y < 8) {
                     fb->bitmap->pixel[x][y] = WHITE;
             }
