@@ -74,6 +74,7 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
         for(int j=0; j<8; j++) {
             if(object[i+j*8]=='#') {
                 int x, y;
+                int Rx, Ry;
                 Rx = (i + xOffset);
                 Ry = (j + yOffset);
                 x = (i);
