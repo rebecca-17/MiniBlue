@@ -72,13 +72,14 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
         for(int j=0; j<8; j++) {
             if(object[i+j*8]=='#') {
                 int x, y;
-                x = (-i + xOffset -2 );
-                y = (j + yOffset);
-                if (x >= 0 && x < 8 && y >= 0 && y < 8) {
-                    fb->bitmap->pixel[x][y] = WHITE;
-                    printf("rebecc is short");
+                x = pm(-i + xOffset -2 );
+                y = pm(j + yOffset);
+                fb->bitmap->pixel[x][y] = WHITE;
+                //if (x >= 0 && x < 8 && y >= 0 && y < 8) {
+                //    fb->bitmap->pixel[x][y] = WHITE;
+                //    printf("rebecc is short");
             }
         }
 }
 }   
-}
+//}
