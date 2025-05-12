@@ -47,10 +47,7 @@ void dot_roll() {
 
         check_input(handler,10);
         clear_display();
-        if (letters[Ourindex] == '#') {
-            clear_display();
-            break;
-        }
+        display_map('m', ix, iy, color, degrees, 0, 0)
         x += vx;
         y += vy;
         usleep(50000);

@@ -59,7 +59,7 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
 
     char *object=NULL;
 
-    if(map=='map') {
+    if(map=='m') {
         object=Wmap;
     }else {
         printf("Critical error\n");
@@ -78,3 +78,4 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
             }
         }
 }
+}   
