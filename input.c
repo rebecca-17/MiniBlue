@@ -3,6 +3,7 @@
 #include <linux/input.h>
 #include <stdio.h>
 #include <signal.h>
+#include <time.h>
 
 void open_input(void);
 void close_input(void);
