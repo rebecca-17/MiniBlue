@@ -16,22 +16,22 @@ void handler(unsigned int code) {
     if(code == KEY_UP) {
         printf("right");
         if (!(vx > 8)) {
-        vx++;
+        vx--;
         };
     }else if(code == KEY_DOWN) {
         printf("left");
         if (!(vx < 0)) {
-        vx--;
+        vx++;
         };
     }else if(code == KEY_RIGHT) {
         printf("down");
         if (!(vy < 0)) {
-        vy--;
+        vy++;
         };
     }else if(code == KEY_LEFT) {
         printf("up");
         if (!(vy > 8)) {
-        vy++;
+        vy--;
         };
     }else if(code == KEY_ENTER) {
         //printf("push");
