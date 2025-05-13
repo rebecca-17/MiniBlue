@@ -10,7 +10,6 @@
 int vx = 6, vy = 6;
 char* color = "WHITE";
 int degrees = 0;
-int Ourindex = 0;
 int gemlocationX = 3, gemlocationY = 3;
 
 void createGem(void) {
@@ -25,41 +24,37 @@ int search() {
 }
 
 void handler(unsigned int code) {
-    printf("code: %u\t",code);
+    //printf("code: %u\t",code);
     if(code == KEY_UP) {
         printf("right");
         if (!(vx <= 1)) {
         vx--;
         };
     }else if(code == KEY_DOWN) {
-        printf("left");
+        //printf("left");
         if (!(vx >= 6)) {
         vx++;
         };
     }else if(code == KEY_RIGHT) {
-        printf("down");
+        //printf("down");
         if (!(vy >= 6)) {
         vy++;
         };
     }else if(code == KEY_LEFT) {
-        printf("up");
+        //printf("up");
         if (!(vy <= 1)) {
         vy--;
         };
     }else if(code == KEY_ENTER) {
-        printf("push");
+        //printf("push");
         if (search()) {
             createGem();
         }
     }
-    printf("\n");
+    //printf("\n");
 }
 void dot_roll() {
-
-    char letters[] = {'A', 'Y', 'R', 'F','#'};
-
     open_display();
-    float dt = 0.05;
 
     createGem();
     
@@ -86,7 +81,6 @@ int main(int argc, char *argv[]){
             printf(argv[0]);
             h();
             return 0;
-
         } else{
             printf(argv[0]);
             h();
