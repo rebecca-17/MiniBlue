@@ -49,13 +49,14 @@ void dot_roll() {
 
     int gemlocationX = 3, gemlocationY = 3;
 
-    display_gem(gemlocationX,gemlocationY);
+    
 
     open_input();
     while (1) {
 
         check_input(handler,10);
         clear_display();
+        display_gem(gemlocationX,gemlocationY);
         display_map('m', vx, vy, color, degrees, 0, 0);
         usleep(50000);
     }
