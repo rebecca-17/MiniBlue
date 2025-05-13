@@ -49,7 +49,7 @@ void handler(unsigned int code) {
     }else if(code == KEY_ENTER) {
         printf("push");
         if (search()) {
-            createGem()
+            createGem();
         }
     }
     printf("\n");
