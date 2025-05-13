@@ -45,7 +45,7 @@ void dot_roll() {
 
     open_display();
 
-    float x = -2, y = -2;
+    float x = 4, y = 4;
     float dt = 0.05;
 
     open_input();
