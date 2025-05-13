@@ -60,7 +60,7 @@ void dot_roll() {
     
     open_input();
     while (1) {
-
+        check_shake();
         check_input(handler,10);
         clear_display();
         display_gem(gemlocationX,gemlocationY);
