@@ -18,7 +18,11 @@ void createGem(void) {
     gemlocationY = (rand() % 6) + 1;
 }
 
-
+int search() {
+    if((vx == gemlocationX) && (vy == gemlocationY)) {
+        return 1;
+    }else return 0;
+}
 
 void handler(unsigned int code) {
     printf("code: %u\t",code);
@@ -43,8 +47,10 @@ void handler(unsigned int code) {
         vy--;
         };
     }else if(code == KEY_ENTER) {
-        //printf("push");
-        Ourindex++;
+        printf("push");
+        if (search()) {
+            createGem()
+        }
     }
     printf("\n");
 }
