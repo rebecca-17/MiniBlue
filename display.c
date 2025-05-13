@@ -6,19 +6,10 @@
 
 #define WHITE 0xFFFF
 #define BLACK 0x0000
-#define RED   0xF800  
 #define GREEN 0x07E0 
 #define BLUE  0x001F  
 
 pi_framebuffer_t *fb= NULL;
-char letA[]="........"
-            "..###..."
-            ".#...#.."
-            ".#...#.."
-            "........"
-            ".#...#.."
-            ".#...#.."
-            ".#...#..";
 
 char Wmap[] =   "########"
                 "#......#"
@@ -28,8 +19,6 @@ char Wmap[] =   "########"
                 "#......#"
                 "#......#"
                 "########";
-
-
 
 void clear_display(void){
     if(fb) {
@@ -76,7 +65,6 @@ void display_map(char map,int xOffset, int yOffset , char* color, int degrees, i
         object=Wmap;
     }else {
         printf("Critical error\n");
-        object=letA;
     }
 
     miniBecca(xOffset,yOffset);

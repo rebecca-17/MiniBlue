@@ -78,22 +78,6 @@ void dot_roll() {
     close_input();
 }
 
-void h() {
-    printf("                 Runs program. Shift Joystick to add velocity to the letter in a certain direction.\n");
-    printf("                         Each additional shift speeds up the letter in that direction. Press down on the joystick to\n");
-    printf("                         change the letter. Program exits after the joystick is pressed down 4 times, ie after\n");
-    printf("                         a user cycles through all the letters {AYRF}.\n\n");
-    printf("./scroll -h              Displays usage instructions for the program.\n\n");
-    printf("./scroll -c COLOR        Sets the scrolling display color to the color given.\n");
-    printf("                         COLOR may be one of WHITE, RED, GREEN or BLUE. Input directly with no quotes ie ./scroll -c RED\n\n");
-    printf("./scroll -r DEGREES      Rotates the displayed letters counter-clockwise.\n");
-    printf("                         DEGREES may be 0, 90, 180, or 270.\n\n");
-    printf("./scroll -s              If the x-directio speed or y-direction \n");
-    printf("                         speed goes above 10 in any direction the letter displays red.\n");
-}
-
-
-
 int main(int argc, char *argv[]){
     srand(time(NULL));
     open_display();
