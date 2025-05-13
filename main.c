@@ -55,6 +55,7 @@ void dot_roll() {
     open_display();
     float dt = 0.05;
 
+    createGem();
     
     open_input();
     while (1) {
