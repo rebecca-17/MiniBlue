@@ -38,8 +38,6 @@ void check_shake(void){
     if(data.x >30 && data.y> 30 && data.z >30){
         clear_display();
     }
-    else{
-        return 0;
-    }
+    
 
 }
