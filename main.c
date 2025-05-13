@@ -20,7 +20,7 @@ void handler(unsigned int code) {
         };
     }else if(code == KEY_DOWN) {
         printf("left");
-        if (!(vx <= 6)) {
+        if (!(vx >= 6)) {
         vx++;
         };
     }else if(code == KEY_RIGHT) {
