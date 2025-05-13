@@ -20,12 +20,12 @@ void handler(unsigned int code) {
         };
     }else if(code == KEY_DOWN) {
         printf("left");
-        if (!(vx < 0)) {
+        if (!(vx < 6)) {
         vx++;
         };
     }else if(code == KEY_RIGHT) {
         printf("down");
-        if (!(vy < 0)) {
+        if (!(vy <= 6)) {
         vy++;
         };
     }else if(code == KEY_LEFT) {
