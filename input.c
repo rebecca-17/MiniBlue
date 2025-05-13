@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <signal.h>
 #include <time.h>
+#include <unistd.h>
 
 void open_input(void);
 void close_input(void);
@@ -39,7 +40,7 @@ void check_shake(void){
     getGyroPosition(device,&data);
     if(data.x >1 || data.y> 1 || data.z >1){
         printf("Rebecca is short");
-        usleep(2);
+        usleep(5000);
     }
     
 
