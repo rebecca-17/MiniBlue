@@ -8,7 +8,7 @@ scroll: main.o display.o input.o
 terminal: main.o terminal.o
 	cc -o terminal main.o terminal.o $(LDFLAGS)
 
-%.o: %.c scroll.h
+%.o: %.c project.h
 	cc -g -c $< -I ~/include
 
 clean:

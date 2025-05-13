@@ -1,5 +1,5 @@
-#ifndef SCROLL_H
-#define SCROLL_H
+#ifndef PROJECT_H
+#define PROJECT_H
 
 
 void open_input(void);

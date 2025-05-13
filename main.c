@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
-#include "scroll.h"
+#include "project.h"
 #include <linux/input.h>
 #include <string.h>
 #include <stdlib.h>
