@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-int vx = 7, vy = 7;
+int vx = 6, vy = 6;
 char* color = "WHITE";
 int degrees = 0;
 int Ourindex = 0;
@@ -15,7 +15,7 @@ void handler(unsigned int code) {
     printf("code: %u\t",code);
     if(code == KEY_UP) {
         printf("right");
-        if (!(vx > 8)) {
+        if (!(vx >= 8)) {
         vx--;
         };
     }else if(code == KEY_DOWN) {
