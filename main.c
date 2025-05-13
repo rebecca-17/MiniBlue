@@ -44,8 +44,6 @@ void dot_roll() {
     char letters[] = {'A', 'Y', 'R', 'F','#'};
 
     open_display();
-
-    float x = 4, y = 4;
     float dt = 0.05;
 
     open_input();
@@ -53,9 +51,7 @@ void dot_roll() {
 
         check_input(handler,10);
         clear_display();
-        display_map('m', x, y, color, degrees, 0, 0);
-        x = vx;
-        y = vy;
+        display_map('m', vx, vy, color, degrees, 0, 0);
         usleep(50000);
     }
 
