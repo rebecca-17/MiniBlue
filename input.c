@@ -38,7 +38,7 @@ void check_shake(void){
     getGyroPosition(device,&data);
     if(data.x >1 || data.y> 1 || data.z >1){
         printf("Rebecca is short");
-        sleep(2);
+        usleep(2);
     }
     
 
