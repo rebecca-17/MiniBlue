@@ -40,10 +40,6 @@ void close_display(void){
     }
 }
 
-int pm(int i) {
-        return (i % 8 + 8) % 8;
-}
-
 void display_gem(int gemlocationX, int gemlocationY) {
     fb->bitmap->pixel[gemlocationX][gemlocationY] = GREEN;
 }
