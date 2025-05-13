@@ -2,6 +2,7 @@
 #include "project.h"
 #include <linux/input.h>
 #include <stdio.h>
+#inlcude <signal.h>
 
 void open_input(void);
 void close_input(void);
@@ -34,9 +35,9 @@ void check_input(void (*callback)(unsigned int code), int delay){
 }
 
 void check_shake(void){
-    getAccelData(device,&data);
+    getGyroPosition(device,&data);
     if(data.x >30 || data.y> 30 || data.z >30){
-        clear_display();
+        printf("Rebecca is short");
     }
     
 
