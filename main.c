@@ -5,11 +5,19 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <time.h>
 
 int vx = 6, vy = 6;
 char* color = "WHITE";
 int degrees = 0;
 int Ourindex = 0;
+int gemlocationX = 3, gemlocationY = 3;
+
+void createGem(void) {
+    gemlocationX = (rand() % 6) + 1;
+    gemlocationY = (rand() % 6) + 1;
+}
+
 
 
 void handler(unsigned int code) {
@@ -47,10 +55,7 @@ void dot_roll() {
     open_display();
     float dt = 0.05;
 
-    int gemlocationX = 3, gemlocationY = 3;
-
     
-
     open_input();
     while (1) {
 
@@ -83,6 +88,7 @@ void h() {
 
 
 int main(int argc, char *argv[]){
+    srand(time(NULL));
     open_display();
     for(int i=1; i<argc; i++){
         if(strcmp(argv[i], "-h")==0){
