@@ -2,7 +2,7 @@
 #include "project.h"
 #include <linux/input.h>
 #include <stdio.h>
-#inlcude <signal.h>
+#include <signal.h>
 
 void open_input(void);
 void close_input(void);
