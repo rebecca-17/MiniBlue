@@ -55,7 +55,9 @@ int pm(int i) {
         return (i % 8 + 8) % 8;
 }
 
-
+void display_gem(int gemlocationX, int gemlocationY) {
+    fb->bitmap->pixel[gemlocationX][gemlocationY] = GREEN;
+}
 
 void display_map(char map, int xOffset, int yOffset, char* color, int degrees, int vx, int vy){
     

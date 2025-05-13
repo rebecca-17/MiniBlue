@@ -11,6 +11,7 @@ char* color = "WHITE";
 int degrees = 0;
 int Ourindex = 0;
 
+
 void handler(unsigned int code) {
     printf("code: %u\t",code);
     if(code == KEY_UP) {
@@ -45,6 +46,10 @@ void dot_roll() {
 
     open_display();
     float dt = 0.05;
+
+    int gemlocationX = 3, int gemlocationY = 3;
+
+    display_gem(gemlocationX,gemlocationY);
 
     open_input();
     while (1) {
