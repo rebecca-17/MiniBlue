@@ -25,7 +25,7 @@ void handler(unsigned int code) {
         };
     }else if(code == KEY_RIGHT) {
         printf("down");
-        if (!(vy <= 6)) {
+        if (!(vy >= 6)) {
         vy++;
         };
     }else if(code == KEY_LEFT) {
