@@ -59,7 +59,16 @@ void display_gem(int gemlocationX, int gemlocationY) {
     fb->bitmap->pixel[gemlocationX][gemlocationY] = GREEN;
 }
 
-void display_map(char map, int xOffset, int yOffset, char* color, int degrees, int vx, int vy){
+void miniBecca(int xOffset, int yOffset) {
+    int Rx, Ry;
+    Rx = (xOffset);
+    Ry = (yOffset);
+    if (Rx >= 0 && Rx < 8 && Ry >= 0 && Ry < 8) {
+        fb->bitmap->pixel[Rx][Ry] = BLUE;
+    }
+}
+
+void display_map(char map,int xOffset, int yOffset , char* color, int degrees, int vx, int vy){
     
     char *object=NULL;
     
@@ -70,21 +79,16 @@ void display_map(char map, int xOffset, int yOffset, char* color, int degrees, i
         object=letA;
     }
 
+    miniBecca(xOffset,yOffset);
      
     for(int i=0; i<8; i++) {
         for(int j=0; j<8; j++) {
             if(object[i+j*8]=='#') {
                 int x, y;
-                int Rx, Ry;
-                Rx = (xOffset);
-                Ry = (yOffset);
                 x = (i);
                 y = (j);
                 fb->bitmap->pixel[x][y] = WHITE;
-                if (Rx >= 0 && Rx < 8 && Ry >= 0 && Ry < 8) {
-                    fb->bitmap->pixel[Rx][Ry] = BLUE;
             }
         }
 }
 }   
-}
