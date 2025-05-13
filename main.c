@@ -47,7 +47,7 @@ void dot_roll() {
     open_display();
     float dt = 0.05;
 
-    int gemlocationX = 3, int gemlocationY = 3;
+    int gemlocationX = 3, gemlocationY = 3;
 
     display_gem(gemlocationX,gemlocationY);
 
