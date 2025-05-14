@@ -65,7 +65,16 @@ void dot_roll() {
     open_input();
     while (1) {
         calibrate();
-        check_shake();
+        if(check_shake()){
+             
+        for(int i=0; i<8; i++){
+            for(int j=0; j<score; j++){
+               fb->bitmap->pixel[i][j] = GREEN;
+                } 
+            }
+            usleep(1000);
+        }
+
         check_input(handler,10);
         clear_display();
         display_gem(gemlocationX,gemlocationY);

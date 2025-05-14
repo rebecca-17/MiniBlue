@@ -47,16 +47,13 @@ void calibrate(){
 void check_shake(int score){
     getGyroPosition(device,&data);
     if(data.x >10|| data.y> 10 || data.z >10){
-        
-        for(int i=0; i<8; i++){
-            for(int j=0; j<score; j++){
-               fb->bitmap->pixel[i][j] = GREEN;
-                } 
-            }
-            usleep(1000);
-        }
-        
+       
+        return 1;
         
     }
+    else{
+        return 0;
+    }
+}
     
 
