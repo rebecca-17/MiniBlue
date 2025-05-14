@@ -66,14 +66,10 @@ void dot_roll() {
     while (1) {
         calibrate();
         if(check_shake()){
-             
-        for(int i=0; i<8; i++){
-            for(int j=0; j<score; j++){
-               fb->bitmap->pixel[i][j] = GREEN;
-                } 
-            }
-            usleep(1000);
+            show_score();
         }
+             
+        
 
         check_input(handler,10);
         clear_display();
@@ -81,7 +77,7 @@ void dot_roll() {
         display_map('m', vx, vy, color, degrees, 0, 0);
         usleep(50000);
         
-    }
+
 
     clear_display();
     close_display();

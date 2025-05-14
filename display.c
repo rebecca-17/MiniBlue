@@ -40,6 +40,16 @@ void close_display(void){
     }
 }
 
+void show_score(){
+    for(int i=0; i<8; i++){
+            for(int j=0; j<score; j++){
+               fb->bitmap->pixel[i][j] = GREEN;
+                } 
+            }
+            usleep(1000);
+        }
+
+
 void display_gem(int gemlocationX, int gemlocationY) {
     fb->bitmap->pixel[gemlocationX][gemlocationY] = GREEN;
 }
