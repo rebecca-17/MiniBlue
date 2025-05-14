@@ -45,7 +45,7 @@ void show_score(int score){
     clear_display();
     for(int i=0; i<8; i++){
             for(int j=0; j<score; j++){
-               fb->bitmap->pixel[i][j+1] = GREEN;
+               fb->bitmap->pixel[i][j] = GREEN;
                 } 
             }
             usleep(5000000);
