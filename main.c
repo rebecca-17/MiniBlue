@@ -76,6 +76,7 @@ void dot_roll() {
         display_gem(gemlocationX,gemlocationY);
         display_map('m', vx, vy, color, degrees, 0, 0);
         usleep(50000);
+    }
         
 
 
