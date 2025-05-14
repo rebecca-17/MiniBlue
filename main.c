@@ -23,6 +23,8 @@ int search() {
     }else return 0;
 }
 
+
+
 void handler(unsigned int code) {
     //printf("code: %u\t",code);
     if(code == KEY_UP) {
@@ -60,6 +62,7 @@ void dot_roll() {
     
     open_input();
     while (1) {
+        calibrate();
         check_shake();
         check_input(handler,10);
         clear_display();

@@ -12,7 +12,7 @@ void close_input(void);
 void check_input(void (*callback)(unsigned int code), int delay);
 
 int dx = 0, dy = 0;
-int shake =0;
+
 
 /* Program stops when 'running' is zero */
 int running=1;
@@ -38,12 +38,17 @@ void check_input(void (*callback)(unsigned int code), int delay){
     pollJoystick(joystick, callback, delay);
 }
 
+void calibrate(){
+      while(getGyroPosition(device,&data) && data.x==0.0) {
+            usleep(100);
+        }
+}
 
 void check_shake(void){
     getGyroPosition(device,&data);
-    if((data.x >2 || data.y> 2 || data.z >2)&&(shake !=1)){
+    if(data.x >2 || data.y> 2 || data.z >2){
         printf("Rebecca is short");
-        shake= 1;
+        
         
     }
     
