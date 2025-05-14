@@ -7,6 +7,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <stdbool.h>
+#include <math.h>
 
 void open_input(void);
 void close_input(void);
@@ -47,9 +48,7 @@ void calibrate(){
 
 int check_shake(void) {
     getGyroPosition(device, &data);
-
-    
-    if (data.x > 8 || data.y > 8 || data.z > 8) {
+    if (fabs(data.x) > 8 || fabs(data.y) > 8 || fabs(data.z) > 8) {
         while (true) {
             getGyroPosition(device, &data);
             if (data.x < 5 && data.y < 5 && data.z < 5) {
