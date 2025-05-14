@@ -44,11 +44,11 @@ void close_display(void){
 void show_score(int score){
     printf("arron is bigback");
     for(int i=0; i<8; i++){
-            for(int j=0; j<score; j++){
+            for(int j=1; j<score; j++){
                fb->bitmap->pixel[i][j] = GREEN;
                 } 
             }
-            usleep(1000);
+            usleep(500000);
         }
 
 

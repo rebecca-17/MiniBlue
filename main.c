@@ -64,7 +64,7 @@ void dot_roll() {
     createGem();
     
     open_input();
-    while (score<8) {
+    while (score<5) {
         calibrate();
         if(check_shake()){
             show_score(score);

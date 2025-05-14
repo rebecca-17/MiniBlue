@@ -40,7 +40,7 @@ void check_input(void (*callback)(unsigned int code), int delay){
 
 void calibrate(){
       while(getGyroPosition(device,&data) && data.x==0.0) {
-            usleep(100);
+            usleep(1000);
         }
 }
 
