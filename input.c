@@ -48,6 +48,7 @@ void calibrate(){
 
 int check_shake(void) {
     getGyroPosition(device, &data);
+    printf("x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
     if (fabs(data.x) > 20 || fabs(data.y) > 20 || fabs(data.z) > 20) {
         while (true) {
             getGyroPosition(device, &data);
