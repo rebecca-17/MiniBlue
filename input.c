@@ -55,7 +55,7 @@ int check_shake(void) {
         
         while (true) {
             getGyroPosition(device, &data);
-            if (data.x < 5 && data.y < 5 && data.z < 5) {
+            if (data.x < 8 && data.y < 8 && data.z < 8) {
                 break;
             }
             usleep(10000);  
