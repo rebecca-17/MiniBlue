@@ -44,7 +44,7 @@ void calibrate(){
         }
 }
 
-int check_shake(int score){
+int check_shake(void){
     getGyroPosition(device,&data);
     if(data.x >10|| data.y> 10 || data.z >10){
        
