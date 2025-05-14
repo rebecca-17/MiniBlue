@@ -64,7 +64,6 @@ void dot_roll() {
         check_input(handler,10);
         clear_display();
         display_gem(gemlocationX,gemlocationY);
-       
         display_map('m', vx, vy, color, degrees, 0, 0);
         usleep(50000);
         
