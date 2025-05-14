@@ -49,7 +49,7 @@ void calibrate(){
 int check_shake(void) {
     getAccelData(device, &data);
     printf("Start x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
-    if (fabs(data.x) > 20 || fabs(data.y) > 20) {
+    if (fabs(data.x) > 1 || fabs(data.y) > 1) {
         while (true) {
             getAccelData(device, &data);
             printf("Ending x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
