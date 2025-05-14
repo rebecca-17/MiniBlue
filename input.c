@@ -53,7 +53,7 @@ int check_shake(void) {
         while (true) {
             getGyroPosition(device, &data);
             printf("Ending x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
-            if (data.x < 10 && data.y < 10) {
+            if (fabs(data.x) < 10 && fabs(data.y) < 10) {
                 break;
             }
              
