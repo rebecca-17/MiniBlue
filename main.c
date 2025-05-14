@@ -20,8 +20,9 @@ void createGem(void) {
 
 int search() {
     if((vx == gemlocationX) && (vy == gemlocationY)) {
-        return 1;
         score++;
+        return 1;
+        
     }else return 0;
 }
 
