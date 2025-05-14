@@ -26,8 +26,6 @@ int search() {
     }else return 0;
 }
 
-
-
 void handler(unsigned int code) {
     //printf("code: %u\t",code);
     if(code == KEY_UP) {
@@ -71,9 +69,7 @@ void dot_roll() {
             show_score(score);
         }
              
-        
-
-        check_input(handler,10);
+        check_input(handler,2);
         clear_display();
         display_gem(gemlocationX,gemlocationY);
         display_map('m', vx, vy, color, degrees, 0, 0);
