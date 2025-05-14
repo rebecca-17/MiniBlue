@@ -11,6 +11,7 @@ int vx = 6, vy = 6;
 char* color = "WHITE";
 int degrees = 0;
 int gemlocationX = 3, gemlocationY = 3;
+int score=0;
 
 void createGem(void) {
     gemlocationX = (rand() % 6) + 1;
@@ -20,6 +21,7 @@ void createGem(void) {
 int search() {
     if((vx == gemlocationX) && (vy == gemlocationY)) {
         return 1;
+        score++;
     }else return 0;
 }
 
