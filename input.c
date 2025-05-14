@@ -15,7 +15,6 @@ void check_input(void (*callback)(unsigned int code), int delay);
 
 int dx = 0, dy = 0;
 
-
 /* Program stops when 'running' is zero */
 int running=1;
 
@@ -33,8 +32,6 @@ void close_input(void){
         freeJoystick(joystick);
         joystick = NULL;
     }
-
-
 }
 void check_input(void (*callback)(unsigned int code), int delay){
     pollJoystick(joystick, callback, delay);
@@ -48,11 +45,11 @@ void calibrate(){
 
 int check_shake(void) {
     getAccelData(device, &data);
-    printf("Start x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
+    
     if (fabs(data.x) > 1 || fabs(data.y) > 1) {
         while (true) {
             getAccelData(device, &data);
-            printf("Ending x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
+        
             if (fabs(data.x) < 0.5 && fabs(data.y) < 0.5) {
                 break;
             }

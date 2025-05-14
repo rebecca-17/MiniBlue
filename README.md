@@ -23,6 +23,7 @@ Instructions:
     Addition commands:
     make all -> complies the file
     make clean -> removes the compiled files
+    ./project -> to run the game
     
 
 

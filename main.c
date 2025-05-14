@@ -75,9 +75,6 @@ void dot_roll() {
         //usleep(50000);
     }
      show_score(score);
-        
-
-
 
     clear_display();
     close_display();
@@ -88,7 +85,6 @@ int main(){
     srand(time(NULL));
     open_display();
     
-
 	dot_roll();
 
     close_display();
