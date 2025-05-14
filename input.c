@@ -49,7 +49,7 @@ int check_shake(void) {
     getGyroPosition(device, &data);
 
     
-    if (data.x > 10 || data.y > 10 || data.z > 10) {
+    if (data.x > 8 || data.y > 8 || data.z > 8) {
         
 
         
