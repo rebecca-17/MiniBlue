@@ -6,6 +6,7 @@
 #include <signal.h>
 #include <time.h>
 #include <unistd.h>
+#include <stdbool.h>
 
 void open_input(void);
 void close_input(void);
