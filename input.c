@@ -46,8 +46,9 @@ void calibrate(){
 
 int check_shake(void){
     getGyroPosition(device,&data);
-    if(data.x >10|| data.y> 10 || data.z >10){
+    if(data.x >5|| data.y> 5|| data.z >5){
        
+        printf("rebecca");
         return 1;
         
     }
