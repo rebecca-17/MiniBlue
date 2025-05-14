@@ -48,14 +48,24 @@ void calibrate(){
 int check_shake(void) {
     getGyroPosition(device, &data);
 
-    if (data.x > 14 || data.y > 14 || data.z > 14) {
-        
+    
+    if (data.x > 12 || data.y > 12 || data.z > 12) {
         
 
-        return 1; 
+        
+        while (true) {
+            getGyroPosition(device, &data);
+            if (data.x < 5 && data.y < 5 && data.z < 5) {
+                break;
+            }
+            usleep(10000);  
+        }
+
+        return 1;
     }
 
-    return 0; 
+    return 0;
 }
+
     
 

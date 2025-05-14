@@ -48,7 +48,7 @@ void show_score(int score){
                fb->bitmap->pixel[i][j] = GREEN;
                 } 
             }
-            usleep(5000000);
+            usleep(3000000);
         }
 
 
