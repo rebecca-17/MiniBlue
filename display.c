@@ -44,8 +44,8 @@ void close_display(void){
 void show_score(int score){
     printf("arron is bigback");
     for(int i=0; i<8; i++){
-            for(int j=1; j<score; j++){
-               fb->bitmap->pixel[i][j] = GREEN;
+            for(int j=; j<score; j++){
+               fb->bitmap->pixel[i][j+1] = GREEN;
                 } 
             }
             usleep(500000);
