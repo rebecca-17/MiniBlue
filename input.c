@@ -38,7 +38,7 @@ void check_input(void (*callback)(unsigned int code), int delay){
 }
 
 void check_shake(void){
-    getAccelData(device,&data);
+    getGyroPosition(device,&data);
     if(data.x >2 || data.y> 2 || data.z >2){
         printf("Rebecca is short");
         usleep(5000);
