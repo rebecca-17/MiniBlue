@@ -53,7 +53,7 @@ int check_shake(void) {
         while (true) {
             getAccelData(device, &data);
             printf("Ending x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
-            if (fabs(data.x) < 10 && fabs(data.y) < 10) {
+            if (fabs(data.x) < 0.5 && fabs(data.y) < 0.5) {
                 break;
             }
              
