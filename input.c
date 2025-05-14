@@ -1,3 +1,4 @@
+#define _GNU_SOURCE
 #include "sense.h"
 #include "project.h"
 #include <linux/input.h>
