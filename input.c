@@ -58,7 +58,7 @@ int check_shake(void) {
             if (data.x < 5 && data.y < 5 && data.z < 5) {
                 break;
             }
-            usleep(10000);  
+             
         }
 
         return 1;
