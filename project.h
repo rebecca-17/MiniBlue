@@ -12,6 +12,6 @@ void display_map(char letter, int xOffset, int yOffset, char* color, int degrees
 void display_gem(int gemlocationX, int gemlocationY);
 int check_shake(void);
 void calibrate(void);
-void show_score();
+void show_score(int score);
 
 #endif

@@ -66,7 +66,7 @@ void dot_roll() {
     while (1) {
         calibrate();
         if(check_shake()){
-            show_score();
+            show_score(score);
         }
              
         

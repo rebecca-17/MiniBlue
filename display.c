@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "sense.h"
 #include <string.h>
+#include <unistd.h>
 
 #define WHITE 0xFFFF
 #define BLACK 0x0000
@@ -40,7 +41,7 @@ void close_display(void){
     }
 }
 
-void show_score(){
+void show_score(int score){
     for(int i=0; i<8; i++){
             for(int j=0; j<score; j++){
                fb->bitmap->pixel[i][j] = GREEN;
