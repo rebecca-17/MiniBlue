@@ -56,7 +56,7 @@ int check_shake(void) {
             }
              
         }
-        calibrate()
+        calibrate();
         return 1;
     }
     return 0;
