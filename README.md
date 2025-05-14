@@ -1,15 +1,15 @@
 **Partner Info:**  
 
-**Rebecca Forman:**  
-    raforman@udel.edu  
-    702736493  
-    What I contributed: I implemented the shake input which displays the score for 3 seconds and then returns player to game play. I also made the game end after 8 gems are collected, and the created the code that creates the border.
-
 **Arron Ye (Manager):**   
     arronye@udel.edu  
     702765012  
     What I contributed: I converted the scroll code into the our current code, and using it to make Mini Rebecca move (The blue square). I added the code and checks to ensure Mini Rebecca does not move out of the border. I created the code that 
     make gems and the code to search for gems. 
+
+**Rebecca Forman:**  
+    raforman@udel.edu  
+    702736493  
+    What I contributed: I implemented the shake input which displays the score for 3 seconds and then returns player to game play. I also made the game end after 8 gems are collected, and the created the code that creates the border.
 
 **The program:**  
 The program is a game in which you control Mini Rebecca (The blue square) to collect 8 gems (The green squares).  
