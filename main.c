@@ -87,6 +87,8 @@ void dot_roll() {
 }
 
 int main(){
+    srand(time(NULL));
+    open_display();
     
 
 	dot_roll();
