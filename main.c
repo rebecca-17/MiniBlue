@@ -86,20 +86,8 @@ void dot_roll() {
     close_input();
 }
 
-int main(int argc, char *argv[]){
-    srand(time(NULL));
-    open_display();
-    for(int i=1; i<argc; i++){
-        if(strcmp(argv[i], "-h")==0){
-            printf(argv[0]);
-            return 0;
-        } else{
-            printf(argv[0]);
-            return 0;
-
-        }
-        
-    }
+int main(){
+    
 
 	dot_roll();
 
