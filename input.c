@@ -41,17 +41,17 @@ void check_input(void (*callback)(unsigned int code), int delay){
 }
 
 void calibrate(){
-      while(getGyroPosition(device,&data) && data.x==0.0) {
+      while(getAccelData(device,&data) && data.x==0.0) {
             usleep(10000);
         }
 }
 
 int check_shake(void) {
-    getGyroPosition(device, &data);
+    getAccelData(device, &data);
     printf("Start x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
     if (fabs(data.x) > 20 || fabs(data.y) > 20) {
         while (true) {
-            getGyroPosition(device, &data);
+            getAccelData(device, &data);
             printf("Ending x: %.2f, y: %.2f, z: %.2f\n", data.x, data.y, data.z);
             if (fabs(data.x) < 10 && fabs(data.y) < 10) {
                 break;
