@@ -1,31 +1,40 @@
-**Partner Info:**  
+# Mini Blue- Raspberry Pi Animation
 
-**Arron Ye (Manager):**   
-    arronye@udel.edu  
-    702765012  
-    What I contributed: I converted the scroll code into the our current code, and using it to make Mini Rebecca move (The blue square). I added the code and checks to ensure Mini Rebecca does not move out of the border. I created the code that 
-    make gems and the code to search for gems. 
+*A collaborative project by Rebecca Forman and Arron Ye for our Intro to Systems Programming course.*
 
-**Rebecca Forman:**  
-    raforman@udel.edu  
-    702736493  
-    What I contributed: I implemented the shake input which displays the score for 3 seconds and then returns player to game play. I also made the game end after 8 gems are collected, and the created the code that creates the border.
+This program is a game in which you control Mini Blue (a blue square) to collect 8 gems (green squares) on a Raspberry Pi LED display.
 
-**The program:**  
-The program is a game in which you control Mini Rebecca (The blue square) to collect 8 gems (The green squares).  
-**Instructions:**  
-    To start the program simply place on a flat surface ensuring the rasberry PI is not moving then start the program via  
+# Instructions:
+    To start the program, simply place the Raspberry Pi on a flat surface, ensuring it is not moving, then start the program via
 
     make run
 
-To control mini Rebecca using the joystick moving her to the gems once you are on top of the gems simply click into/press down on the joystick to collect the gem. After each succesful search a new gem will spawn, after 8 gems are collected the game will end.
+To control Mini Blue, use the joystick to move it to the gems. Once you are on top of a gem press into the joystick to collect it. After each successful collection, a new gem will spawn. After 8 gems are collected, the game will end. To check how many gems you have collected, simply shake the Raspberry Pi, each green line displayed represents a gem collected.   
 
-To check how many gems you have simply shake the rasberry PI, each green line represents a gem collected.   
 Additional commands:  
 
-    make all -> complies the file  
+    make all -> compiles the files  
     make clean -> removes the compiled files  
-    ./project -> to run the game  
+    ./project -> runs the game  
+
+
+### What Rebecca contributed: 
+- Developed the code to display the score once the Raspberry Pi is shaken
+- Terminated the game once eight gems are collected
+- Designed the border
+
+### What Arron contributed:
+- Developed the code to make Mini Blue move
+- Implemented the border boundaries
+- Created the code to randomly generate gem spawns
+
+### What we learned:
+- Created a functional program using C and the Raspberry Pi
+- Connected joystick and accelerometer readings to functionality in the program
+- Teamwork, communication, and patience is key
+
+
+
 
     
 
